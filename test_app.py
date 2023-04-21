@@ -23,8 +23,12 @@ class BoggleAppTestCase(TestCase):
 
         with self.client as client:
             response = client.get('/')
+            html = response.get_data(as_text = True)
+
+            self.assertIn('TESTING HOMEPAGE ROUTE', html)
             ...
             # test that you're getting a template
+            #TODO: check for response code >:^)
 
     def test_api_new_game(self):
         """Test starting a new game."""
