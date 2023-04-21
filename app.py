@@ -27,7 +27,16 @@ def new_game():
     games[game_id] = game
     game_data = {"gameId": game_id, "board": game.board}
 
-    print('jsonifed file ==== ', jsonify(gameId=game_id , board=game.board))
-    # breakpoint()
-    return jsonify(gameId=game_id , board=game.board)
+    return jsonify(game_data)
 
+
+@app.post("/api/score-word")
+def score_word():
+    """
+    Checks valiidity of word, returns result in json.
+    examples:
+        if not a word: {result: "not-word"}
+        if not on board: {result: "not-on-board"}
+        if a valid word: {result: "ok"}
+    """
+    response =
