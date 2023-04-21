@@ -53745,6 +53745,7 @@ zooks
 zoology
 zoom
 zoomed
+zoomer
 zooming
 zooms
 zoon
@@ -53753,6 +53754,7 @@ zooned
 zooning
 zoons
 zoos
+zooted
 zootier
 zootomy
 zooty
