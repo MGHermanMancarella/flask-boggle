@@ -25,5 +25,9 @@ def new_game():
     game_id = str(uuid4())
     game = BoggleGame()
     games[game_id] = game
+    game_data = {"gameId": game_id, "board": game.board}
 
-    return {"gameId": "need-real-id", "board": "need-real-board"}
+    print('jsonifed file ==== ', jsonify(gameId=game_id , board=game.board))
+    # breakpoint()
+    return jsonify(gameId=game_id , board=game.board)
+
