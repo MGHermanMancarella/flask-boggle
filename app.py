@@ -39,4 +39,15 @@ def score_word():
         if not on board: {result: "not-on-board"}
         if a valid word: {result: "ok"}
     """
-    response =
+    game_id = request.json['gameId']
+    word = request.json['word']
+
+    breakpoint()
+    if games[game_id].is_word_in_word_list(word) is False:
+        return jsonify({'result': "not-word"})
+    elif games[game_id].check_word_on_board(word) is False:
+        return jsonify({'result': "not-on-board"})
+    else:
+        return jsonify({'result': "ok"})
+
+
